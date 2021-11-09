@@ -9,7 +9,7 @@ from reflection import ReflectionPadding2D
 class Discriminator:
     def __init__(self,padding ='valid',strides=(2,2),kernel=(4,4),initializer = RandomNormal(mean=0.,stddev=0.02),alpha=0.2):
         img_inp = Input(shape = (256, 256, 3))
-        conv_1 = Conv2D(64,kernel,strides=2,use_bias=False,kernel_initializer=initializer,padding=padding)(ref_1)
+        conv_1 = Conv2D(64,kernel,strides=2,use_bias=False,kernel_initializer=initializer,padding=padding)(img_inp)
         act_1 = LeakyReLU(alpha)(conv_1)
     
         conv_2 = Conv2D(128,kernel,strides=strides,use_bias=False,kernel_initializer=initializer,padding=padding)(act_1)
