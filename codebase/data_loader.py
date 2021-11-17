@@ -10,14 +10,14 @@ from tensorflow.keras import layers
 import tensorflow_datasets as tfds
 
 
-FILENAMES_MONET = tf.io.gfile.glob('monet_tfrec/' + "*.tfrec")
-FILENAMES_REAL = tf.io.gfile.glob('photo_tfrec/' + "*.tfrec")
+FILENAMES_MONET = tf.io.gfile.glob('../monet_tfrec/' + "*.tfrec")
+FILENAMES_REAL = tf.io.gfile.glob('../photo_tfrec/' + "*.tfrec")
 
 print("Train TFRecord Files:", len(FILENAMES_MONET))
 print("Train TFRecord Files:", len(FILENAMES_REAL))
 
 AUTOTUNE = tf.data.AUTOTUNE
-BATCH_SIZE = 64
+BATCH_SIZE = 1
 IMAGE_SIZE = [256,256]
 
 def decode_image(image,IMAGE_SIZE=256):
@@ -66,10 +66,10 @@ def get_dataset(filenames, labeled=True):
     dataset = dataset.batch(BATCH_SIZE)
     return dataset
 
-train_monet = get_dataset(FILENAMES_MONET)
-train_real = get_dataset(FILENAMES_REAL)
+def data():
+    return get_dataset(FILENAMES_REAL),get_dataset(FILENAMES_MONET)
 
-image_batch = next(iter(train_monet))
+#image_batch = next(iter(train_monet))
 
 
 def show_batch(image_batch):
@@ -83,6 +83,7 @@ def show_batch(image_batch):
         plt.axis("off")
     plt.show()
 
-show_batch(image_batch.numpy())
+
+#show_batch(image_batch.numpy())
 
 #print(train_dataset.tonumpy().shape)
