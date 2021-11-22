@@ -4,6 +4,9 @@
 
 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks - https://arxiv.org/pdf/1703.10593.pdf
 
+Notebook/Writeup at https://www.kaggle.com/yousseftaoudi/cyclegan-monet-ization-of-photographs
+
+
 ### Mode Collapse
 
 To prevent Mode Collapse from domain X -> Y, we add a cyclic transformation. Both transformations F : X->Y and G: Y->X must be satisfied.
