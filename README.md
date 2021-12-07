@@ -2,7 +2,7 @@
  
 
 
-Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks - https://arxiv.org/pdf/1703.10593.pdf
+Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks (CycleGAN) - https://arxiv.org/pdf/1703.10593.pdf
 
 Check out the Notebook/Writeup at https://www.kaggle.com/yousseftaoudi/cyclegan-monet-ization-of-photographs !
 
