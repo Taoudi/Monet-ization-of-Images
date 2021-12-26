@@ -117,3 +117,5 @@ dmypy.json
 gan-getting-started/
 monet_tfrec/
 photo_tfrec/
+kaggle.json
+*.h5

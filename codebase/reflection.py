@@ -19,3 +19,4 @@ class ReflectionPadding2D(Layer):
         w_pad,h_pad = self.padding
         return tf.pad(x, [[0,0], [h_pad,h_pad], [w_pad,w_pad], [0,0] ], 'REFLECT')
 
+s

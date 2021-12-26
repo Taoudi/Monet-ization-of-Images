@@ -1,7 +1,5 @@
 from keras.layers import Reshape, Dense, Input, ReLU, Conv2D, Conv2DTranspose, Concatenate, ReLU, Dropout, ZeroPadding2D
-from keras.layers.convolutional import Conv
 from tensorflow_addons.layers import InstanceNormalization
-from keras.initializers import RandomNormal
 
 from keras.models import Model
 from reflection import ReflectionPadding2D

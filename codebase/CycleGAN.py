@@ -6,6 +6,8 @@ from keras.models import Model
 from keras.losses import MeanAbsoluteError, MeanSquaredError
 import tensorflow as tf
 from keras import backend as K
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 #from keras.optimizers import Adam
 
@@ -162,7 +164,7 @@ if __name__ == '__main__':
     #real,monet = data()
     #print(monet)
     cgan = CycleGAN()
-    cgan.fit(tf.data.Dataset.zip(data()),batch_size=1,epochs=1)
+    cgan.fit(tf.data.Dataset.zip(data()),epochs=1)
 
     #print(type(real),type(monet))
     #cgan = CycleGAN()
